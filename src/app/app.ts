@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Parent } from "./components/parent/parent";
+import { ParentContentProjection } from "./components/parent-content-projection/parent-content-projection";
+import { Child } from "./components/child/child";
+import { GetDataService } from './services/get-data.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [
+    Parent,
+    ParentContentProjection,
+    Child,
+  ],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
-export class App {
-  protected title = 'DI-decorators';
-}
+export class App {}
